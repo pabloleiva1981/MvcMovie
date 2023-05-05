@@ -6,7 +6,7 @@ namespace MvcMovie.Controllers
     public class MoviesController : Controller
     {
         // GET: Movies
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var listMovies = new List<Movie>();
 
@@ -55,6 +55,21 @@ namespace MvcMovie.Controllers
 
 
             return View(movie);
+        }
+
+
+        // GET: Movies/Details/5
+        public IActionResult CreateMovie()
+        {
+
+            return View();
+        }
+
+        // GET: Movies/Details/5
+        public IActionResult Delete_nuevo()
+        {
+
+            return View();
         }
     }
 }
