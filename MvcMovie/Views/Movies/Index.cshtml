@@ -6,9 +6,9 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-controller="Movies" asp-action="CreateMovie">Create New</a>
-</p>
+<button type="button" class="btn btn-success">
+    <a asp-controller="Movies" asp-action="CreateMovie">Crear nueva</a>
+</button>
 <table class="table">
     <thead>
         <tr>
@@ -44,9 +44,11 @@
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary"><a asp-action="Edit" asp-route-id="@item.Id">Edit</a></button>
+                    <button type="button" class="btn btn-secondary"><a asp-action="Details" asp-route-id="@item.Id">Details</a></button>
+                    <button type="button" class="btn btn-secondary"><a asp-action="Delete" asp-route-id="@item.Id">Delete</a></button>
+                </div>
                 </td>
             </tr>
         }
